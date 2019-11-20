@@ -4,7 +4,7 @@ Documentation, License etc.
 @package Stringhe
 '''
 
-
+v=3.6
 s='Python v{}'
-s=s.format(3.6)
+s=s.format(v)
 print(s)

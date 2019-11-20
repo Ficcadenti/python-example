@@ -20,3 +20,6 @@ Working Directory=
 
 [Project]
 VersionControlSupport=kdevgit
+
+[SourceFileTemplates]
+LastUsedTemplate=/home/raffo/.local/share/kdevfiletemplates/template_descriptions/python_basic.desktop
