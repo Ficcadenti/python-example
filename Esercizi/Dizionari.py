@@ -8,7 +8,7 @@
 # (at your option) any later version.
 # 
 # This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRATY; without even the implied warranty of
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
 # 
@@ -17,28 +17,27 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-lista_vuota=[]
-print(lista_vuota)
+print('Dizionari')
+d={'a':1, 'b':2 , 'c':3}
+print(type(d))
+print('Dizionario       d =',d)
+d_vuoto={}
+print('Dizionario d_vuoto =',d_vuoto)
 
-lista_piena=[1,23,11,4,5,'python']
-print(lista_piena)
-lista_piena.pop()
-print('Lista ordinata')
-lista_piena.sort()
-print(lista_piena)
-print('Lista invertita')
-lista_piena.reverse()
-print(lista_piena)
-print('Primo elemento della lista')
-print(lista_piena[0])
-print(lista_piena[-1])
-print(lista_piena[0:])
-print(lista_piena[:-1])
-print(lista_piena[0:-1])
-print('python' in lista_piena)
-print(lista_piena*2)
+d2={(0,10):'Primo intervallo',(11,20):'Secondo intervallo'}
+print('Dizionario      d2 =',d2)
+print('Dizionario      (0,10) in d2 ?',(0,10) in d2)
+print('Dizionario      (1,9) in d2 ?',(1,9) in d2)
+print('Dizionario      d2[(0,10)] =',d2[(0,10)])
 
-lista_piena=lista_piena+['b','b','c','d',1]
-print(lista_piena.count(1))
+t=d2.items()
+print(type(t))
+print
 
-print(type(lista_piena))
+k=d2.keys()
+print(type(k))
+print(k)
+
+v=d2.values()
+print(type(v))
+print(v)
