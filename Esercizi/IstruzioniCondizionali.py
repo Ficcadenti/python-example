@@ -17,13 +17,20 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-print('Set')
-nums = {10, 20, 30, 40, 30}
-print(type(nums)) 
-print(nums)
+print('****************** Istruzioni condizionali *************************')
+print('if-elif-else')
+n=int(input("Inserisci un numero: "))
+if(n%2==0):
+    print(n,"è un numero pari")
+elif(n%2==1):
+    print(n,"è un numero dispari")
+    
+n = int(input('Inserisci un numero: '))
+if n < 0:
+    print(n, 'è negativo')
+elif n > 0:
+    print(n, 'è positivo')
+else:
+    print(n, 'è zero')
+    
 
-fnums = frozenset(nums)
-print(type(fnums)) 
-print(fnums)
-
-print(set('raffaele ficcadenti'))

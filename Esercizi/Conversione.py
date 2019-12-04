@@ -17,13 +17,12 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 #
 
-print('Set')
-nums = {10, 20, 30, 40, 30}
-print(type(nums)) 
-print(nums)
-
-fnums = frozenset(nums)
-print(type(fnums)) 
-print(fnums)
-
-print(set('raffaele ficcadenti'))
+num = int(input('Inserisci un numero: '))
+conv = input('Inserisci tipo di conversione [b/o/x]: ')
+funcs = dict(b=bin, o=oct, x=hex)
+if conv in {'b', 'o', 'x'}:
+    func = funcs[conv]
+    res = func(num)
+    print('Il risultato della conversione è:', res)
+else:
+    print('Conversione non valida')
