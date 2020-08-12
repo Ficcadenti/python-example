@@ -7,10 +7,10 @@ Created on 12 ago 2020
 if __name__ == '__main__':
     pass
 
-dict={'a':1,'b':2,'c':3}
-dict['e']=4
+d={'a':1,'b':2,'c':3}
+d['e']=4
 
-print(type(dict))
-print(dict)
+print(type(d))
+print(d)
 
-print(dict.keys())
+print(d.keys())
