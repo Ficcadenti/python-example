@@ -18,6 +18,11 @@ class BClass():
 class AClass(BClass):
     pass
 
+def hello(name=''):
+    if(name==''):
+        return "Hello, World!"
+    else:
+        return "Hello, "+name.capitalize()+'!'
 
 m1=AClass(1)
 m2=BClass()
@@ -30,3 +35,5 @@ print(isinstance(m2, BClass))
 
 print(m1.getDimensione())
 print(m2.getDimensione())
+
+print(hello(''))
