@@ -16,5 +16,7 @@ def MyFun(a,b):
 try:
    print(MyFun(10,2))
    print(MyFun(10,0))
-except Exception as e:
+except ZeroDivisionError as e:
+    print('Generata eccezione: '+str(e))
+except IndexError as e:
     print('Generata eccezione: '+str(e))
