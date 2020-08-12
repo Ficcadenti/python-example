@@ -18,3 +18,7 @@ try:
    print(MyFun(10,0))
 except (ZeroDivisionError,IndexError,Exception) as e:
     print('Generata eccezione: '+str(e.args))
+else:
+    print('Eseguo la suite solo se non ci sono eccezioni !!!')
+finally:
+    print('Eseguo comunque la suite Finally !!!')
