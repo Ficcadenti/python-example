@@ -4,6 +4,7 @@ Created on 16 ago 2020
 @author: raffa
 '''
 import string
+import itertools as iter
 
 if __name__ == '__main__':
     pass
@@ -99,8 +100,44 @@ def next_smaller(n):
     
     return int(''.join(primo + ultimo))
 
+def solution(nums):
+    if(nums != None):
+        print(nums)
+        nums.sort()
+    return nums
 
-         
+def solve(s):
+    up=sum(1 for c in s if c.isupper())
+    down=sum(1 for c in s if c.islower())
+    if(up>down):
+        return s.upper()
+    else:
+        return s.lower()
+    
+def get_pins(observed):
+    dict = {
+            '0': ['0', '8'],
+            '1': ['1', '2', '4'],
+            '2': ['1', '2', '3', '5'],
+            '3': ['2', '3', '6'],
+            '4': ['1', '4', '5', '7'],
+            '5': ['2', '4', '5', '6', '8'],
+            '6': ['3', '5', '6', '9'],
+            '7': ['4', '7', '8'],
+            '8': ['5', '7', '8', '9', '0'],
+            '9': ['6', '8', '9']
+    }
+    
+    numeri = []
+    
+    for c in str(observed):
+        numeri.append(dict[c])
+    
+    pins = [''.join(pin) for pin in list(iter.product(*numeri))]
+    
+    return sorted(pins)
+
+    
 print(monkey_count(20))
 print(valid_parentheses('(())((()())())('))
 print(add_binary(3,5))
@@ -117,3 +154,13 @@ print(high_and_low("4 5 29 54 4 0 -214 542 -64 1 -3 6 -6"))
 print(camel_case('ciao gabriele'))
 
 print(next_smaller(21))
+
+
+
+
+l=[1,3,7,5,4]
+print(solution(None))
+
+print(solve("CODe"))
+
+print(get_pins('2'))
