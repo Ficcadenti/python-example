@@ -1,0 +1,27 @@
+{% load static %}
+<!doctype html>
+<html lang="in">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    <title>Articoli</title>
+</head>
+<body>
+    <!--header-->
+    {% include 'header.html' %}
+    <!--header-->
+    {% block content %}
+    {% endblock content %}
+    <!--footer-->
+    {% include 'footer.html' %}
+</body>
+<script src="{% static 'js/jquery-3.5.1.js' %}"></script>
+<script src="{% static 'js/bootstrap.bundle.js' %}"></script>
+<script src="{% static 'js/popper.js' %}"></script>
+</body>
+</html>
