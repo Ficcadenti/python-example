@@ -1,4 +1,4 @@
-"""django_ex1 URL Configuration
+"""articoli URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.1/topics/http/urls/
@@ -13,14 +13,14 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, include
 
-
-from app_ex1 import views as app_ex1_views
+from news import views as news_views
+from django.views.generic import RedirectView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('homepage', app_ex1_views.homepage, name='home'),
-    path('app_ex1/', include('app_ex1.urls')),
+    path('', include('news.urls')),
 ]
