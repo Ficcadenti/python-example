@@ -1,5 +1,9 @@
 {% extends 'index.html' %}
 
+{% block head_title %}
+    {{ block.super }} : {{ articolo.titolo }}
+{% endblock head_title %}
+
 {% block content %}
 
     <div class="container text-center">

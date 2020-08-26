@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block head_title %}
+    {{ block.super }} : {{ articolo.titolo }}
+{% endblock head_title %}
+
+{% block content %}
+
+{% for a in articoli %}
+    <h1>{{ a.titolo }}</h1>
+{% endfor %}
+{% endblock content %}

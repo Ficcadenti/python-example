@@ -36,11 +36,29 @@ def homepage(request):
             print(a.titolo)
 
 
-    return render(request, "homepage.html", context)
+    return render(request, "content.html", context)
 
 
-def articoloDetailView(request,pk):
+def ArticoloDetailView(request,pk):
     # Articolo.objects.get(pk=pk)
     articolo = get_object_or_404(Articolo,pk=pk)
     context = {"articolo": articolo}
     return render(request, "../templates/articolo_detail.html", context)
+
+## GCBV Class Based View
+
+from django.views.generic.detail import DetailView
+from django.views.generic.list import ListView
+
+class ArticoloDetailViewCB(DetailView):
+    model = Articolo
+    template_name = 'articolo_detail.html'
+
+class ArticoloListViewCB(ListView):
+    model = Articolo
+    template_name = 'lista_articoli.html'
+
+    def get_context_data(self,**kwargs):
+        context=super().get_context_data(**kwargs)
+        context["articoli"]=Articolo.objects.all()
+        return context
